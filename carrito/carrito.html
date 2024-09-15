@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - Perfumería Juan Aguirre</title>
+    <link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <h1>Perfumería Juan Aguirre</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../pagina_principal/pagina_principal.html">Inicio</a></li>
+                    <li><a href="../catalogo/catalogo.html">Catálogo</a></li>
+                    <li><a href="carrito.html">Carrito</a></li>
+                    <li><a href="../contactanos/contactanos.html">Contáctanos</a></li>
+                    <li><a href="../login/login.html" id="logout">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="cart-items">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>IVA</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items-body">
+                    <!-- Los productos del carrito se cargarán dinámicamente aquí -->
+                </tbody>
+            </table>
+        </section>
+        <section class="cart-summary">
+            <h2>Resumen de Pedido</h2>
+            <p id="order-number"></p>
+            <p id="cart-subtotal"></p>
+            <p id="cart-iva"></p>
+            <p id="cart-total"></p>
+            <button id="invoice-button">Generar PDF</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Perfumería Juan Aguirre. Todos los derechos reservados.</p>
+    </footer>
+    <script src="carrito.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+</html>

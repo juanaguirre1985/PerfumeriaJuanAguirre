@@ -1,0 +1,185 @@
+/* pagina_principal.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #20B2AA; /* Fondo azul aguamarina */
+}
+
+header {
+    background-color: #020457; /* Fondo verde para el encabezado */
+    color: white;
+    padding: 12px 0;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Alineamos el logo y el eslogan verticalmente */
+    align-items: center;
+    padding: 0 20px;
+}
+
+#logo {
+    text-align: center;
+    font-size: 2.5em;
+    animation: logoAnimation 4s ease-out, colorChange 4s infinite; /* Añadido efecto multicolor */
+}
+
+#slogan {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 10px;
+    animation: sloganAnimation 4s ease-out;
+}
+
+@keyframes logoAnimation {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes sloganAnimation {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes colorChange {
+    0% { color: #FF5733; } /* Rojo */
+    25% { color: #FFBD33; } /* Amarillo */
+    50% { color: #33FF57; } /* Verde */
+    75% { color: #33C1FF; } /* Azul */
+    100% { color: #FF33A1; } /* Rosa */
+}
+
+nav {
+    background-color: #ffffff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #1a40e7; /* Color del texto en el menú */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s; /* Añadido para el fondo del menú */
+}
+
+nav ul li a:hover {
+    color: #ffc107; /* Color del texto al pasar el mouse */
+    background-color: #f0f0f0; /* Color de fondo al pasar el mouse */
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-height: 500px; /* Ajusta la altura según sea necesario */
+    margin-bottom: 20px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    flex: 1 0 25%; /* Mostrar 4 imágenes a la vez */
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.product-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-item {
+    flex: 1 0 30%; /* Ajusta el tamaño de cada producto */
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-info {
+    margin-top: 10px;
+}
+
+.product-info h3 {
+    margin: 0;
+}
+
+.product-info p {
+    margin: 5px 0;
+}
+
+footer {
+    background-color: #2d77e6;
+    color: rgb(2, 5, 14);
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}

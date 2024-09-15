@@ -1,0 +1,183 @@
+/* carrito.css */
+
+/* Animación para el título */
+@keyframes titleMovement {
+    0% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(-10px); }
+}
+
+header {
+    background-color: #1b4be7; /* Color Fucsia */
+    color: rgb(225, 247, 255);
+    padding: 12px 0;
+    position: relative;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    flex: 1;
+    text-align: center;
+    animation: titleMovement 3s infinite;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.logo h1:hover {
+    color: #ffc107;
+    transform: translateX(5px);
+}
+
+nav {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: rgb(230, 158, 158);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ffc107;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#cart-items {
+    width: 100%;
+}
+
+#cart-items table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#cart-items th, #cart-items td {
+    border: 1px solid #128b5d;
+    padding: 8px;
+}
+
+#cart-items th {
+    background-color: #aca6e5;
+}
+
+.cart-summary {
+    background-color: #f7d29b;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    transition: background-color 0.3s;
+}
+
+.cart-summary:hover {
+    background-color: #a9ca9a;
+}
+
+.cart-summary h2 {
+    margin-top: 0;
+    color: #007bff; /* Color Azul */
+}
+
+.cart-summary p {
+    margin: 10px 0;
+}
+
+button {
+    background-color: #e2309e;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    #cart-items {
+        width: 70%;
+    }
+
+    .cart-summary {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    #cart-items {
+        width: 100%;
+    }
+
+    .cart-summary {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}

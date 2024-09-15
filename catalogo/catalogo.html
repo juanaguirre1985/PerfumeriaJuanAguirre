@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo -Perfumeria Juan Aguirre</title>
+    <link rel="stylesheet" href="catalogo.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <h1>Perfumeria Juan Aguirre</h1>
+                <div class="slogan">Catálogo Actualizado Vigente 2024</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../pagina_principal/pagina_principal.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="../carrito/carrito.html">Carrito</a></li>
+                    <li><a href="../contactanos/contactanos.html">Contáctanos</a></li>
+                    <li><a href="../login/login.html" id="logout">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="product-container">
+            <!-- Los productos se cargarán dinámicamente aquí -->
+        </section>
+        <section class="cart-summary">
+            <h2>Resumen del Carrito</h2>
+            <p id="cart-quantity">Cantidad de productos agregados: 0</p>
+            <p id="cart-average-price">Precio promedio: $0.00</p>
+            <p id="cart-subtotal">Subtotal: $0.00</p>
+            <p id="cart-iva">IVA 19%: $0.00</p>
+            <p id="cart-total">Total a pagar: $0.00</p>
+            <button id="confirm-purchase">Confirmar Compra</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Perfumeria Juan Aguirre. Todos los derechos reservados.</p>
+    </footer>
+    <script src="catalogo.js"></script>
+</body>
+</html>
